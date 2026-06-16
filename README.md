@@ -17,7 +17,19 @@ wget -N https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/instal
 Binary path: `/usr/local/v2node/v2node`
 
 ``` bash
-VERSION=v1.0.0-finalmaskfix1; ARCH=$(uname -m); case "$ARCH" in x86_64|amd64) ASSET=linux-64 ;; aarch64|arm64) ASSET=linux-arm64-v8a ;; *) echo "unsupported arch: $ARCH"; exit 1 ;; esac; TMP=$(mktemp -d); curl -L "https://github.com/sunyuchentrx/v2node/releases/download/${VERSION}/v2node-${ASSET}.zip" -o "$TMP/v2node.zip" && unzip -o "$TMP/v2node.zip" v2node -d "$TMP" && install -m 755 "$TMP/v2node" /usr/local/v2node/v2node.new && mv /usr/local/v2node/v2node.new /usr/local/v2node/v2node && systemctl restart v2node && rm -rf "$TMP"
+bash <(curl -Ls https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/override.sh)
+```
+
+Or with wget:
+
+``` bash
+wget -qO- https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/override.sh | bash
+```
+
+Install a specific version:
+
+``` bash
+bash <(curl -Ls https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/override.sh) v1.0.0-finalmaskfix1
 ```
 
 ## 构建
