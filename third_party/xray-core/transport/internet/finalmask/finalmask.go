@@ -132,7 +132,7 @@ func (c *headerManagerConn) ReadFrom(p []byte) (n int, addr net.Addr, err error)
 		packet := readBuf[:n]
 
 		if n < sum {
-			errors.LogError(context.Background(), "[mask] drop packet from ", addr, " with size ", n)
+			errors.LogDebug(context.Background(), "[mask] drop short packet from ", addr, " with size ", n)
 			continue
 		}
 

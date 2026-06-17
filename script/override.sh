@@ -3,7 +3,7 @@
 set -e
 
 REPO="sunyuchentrx/v2node"
-VERSION="${1:-v1.0.0-finalmaskfix1}"
+VERSION="${1:-v1.0.0-finalmaskfix2}"
 INSTALL_PATH="/usr/local/v2node/v2node"
 
 if [[ $EUID -ne 0 ]]; then

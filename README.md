@@ -29,7 +29,7 @@ wget -qO- https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/over
 Install a specific version:
 
 ``` bash
-bash <(curl -Ls https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/override.sh) v1.0.0-finalmaskfix1
+bash <(curl -Ls https://raw.githubusercontent.com/sunyuchentrx/v2node/main/script/override.sh) v1.0.0-finalmaskfix2
 ```
 
 ## 构建
